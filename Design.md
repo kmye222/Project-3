@@ -6,7 +6,9 @@
 
 ###PHASE 2 DONE IN PARTICIPANT.JS
   Set up not pretty boxes (Like in 010) where we set off those triggers by clicking on those boxes
+  
   • Draw 6 boxes
+  
   • You link them to a box request
   
 ###PHASE 3 DONE IN MONITER.JS
