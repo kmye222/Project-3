@@ -13,3 +13,6 @@
   
 ###PHASE 4
   Color stuff
+  touchStarted()
+  touchMoved()
+  touchEnded()
