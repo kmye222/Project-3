@@ -1,6 +1,7 @@
 ###PHASE 1 DONE IN SERVER.JS
   Set up triggers (like those in example 009) to eventually be the boxes. 
     This is then like a framework that we get to build on for the piece.
+    
     • Create 6 triggers named box_1-box_6
 
 ###PHASE 2 DONE IN PARTICIPANT.JS
