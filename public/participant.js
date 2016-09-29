@@ -7,13 +7,14 @@ function setup(){
 function draw(){
   background(0);
 
-  rect(50, 100, 100, 50);
-  rect(250, 100, 100, 50);
-  rect(450, 100, 100, 50);
+  //  rect(4, 4, 483, 343);
+  //  rect(978, 4, 455, 343);
+  //  rect(498, 4, 470, 343);
+  //  rect(4, 360, 483, 340);
+  //  rect(978, 360, 455, 340);
+  //  rect(498, 360, 470, 340);
 
-  rect(50, 200, 100, 50);
-  rect(250, 200, 100, 50);
-  rect(450, 200, 100, 50);
+    rect(4, (1/3)*windowWidth, (1/2)*windowHeight);
 }
 
 function mouseClicked() {
