@@ -16,10 +16,17 @@
   
 ###PHASE 4
   Color stuff
-  touchStarted()
+  
+  touchStarted()/mouseDown()
+  
       • Get the box touched
+      
       • Set color to zero 
   touchMoved()
       • figure out a way to 
       • %16777215 (make it switch back to 0 once it
-  touchEnded()
+      
+  touchEnded()/mouseUp()
+    
+      • send color generated in touchMoved()/mouseDragged() and box touched in touchStarted()/mouseDown().
+  
