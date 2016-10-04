@@ -67,7 +67,7 @@ function draw(){
 
 }
 
-function mouseClicked() {
+function touchStarted() {
   if(mouseX>50&&mouseX<150&&mouseY>100&&mouseY<150){
     console.log("clicked on trigger_1");
     httpGet('/trigger_1');
