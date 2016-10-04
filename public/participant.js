@@ -1,5 +1,5 @@
 var color; //integer that contains the color to be sent to the moniter.
-var unit;
+var unit; //unit to multiply all screen demensional junk by to keep it all nice and ratioed.
 var xA1, yA1;
 var xB1, yB1;
 var xC1, yC1;
