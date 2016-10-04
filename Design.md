@@ -19,7 +19,7 @@
   
   touchStarted()/mouseDown()
   
-      • Get the box touched
+      • Get the box touched with finger.
       
       • Set color to zero 
       
