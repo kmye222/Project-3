@@ -22,8 +22,11 @@
       • Get the box touched
       
       • Set color to zero 
-  touchMoved()
-      • figure out a way to 
+      
+  touchMoved()/mouseDragged()
+  
+      • figure out a way to use the variables mouseX/touchX and mouseY/touchY to generate a number between 0 and 16777215.
+      
       • %16777215 (make it switch back to 0 once it
       
   touchEnded()/mouseUp()
