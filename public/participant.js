@@ -5,6 +5,7 @@ var xC1, xC2, yC1, yC2;
 var xD1, xD2, yD1, yD2;
 var xE1, xE2, yE1, yE2;
 var xF1, xF2, yF1, yF2;
+var wid, hei;
 
 //unitH = windowHeight/700;
 
@@ -25,35 +26,26 @@ function setup(){
 
   //rect(5*unit, 10*unit, unit*1485, unit*735);
   //rect(xA1, yA1, xA2, yA2);
+  wid = unit*495;
+  hei = unit*367.5;
+
   xA1 = 5*unit;
   yA1 = 10*unit;
-  xA2 = unit*495;
-  yA2 = unit*367.5;
 
   xB1 = unit*495;
   yB1 = 10*unit;
-  xB2 = unit*495;
-  yB2 = unit*367.5;
 
   xC1 = unit*990;
   yC1 = 10*unit;
-  xC2 = unit*495;
-  yC2 = unit*367.5;
 
   xD1 = 5*unit;
   yD1 = unit*367.5;
-  xD2 = unit*495;
-  yD2 = unit*367.5;
 
   xE1 = unit*495;
   yE1 = unit*367.5;
-  xE2 = unit*495;
-  yE2 = unit*367.5;
 
   xF1 = unit*990;
   yF1 = unit*367.5;
-  xF2 = unit*495;
-  yF2 = unit*367.5;
 }
 
 function draw(){
@@ -66,12 +58,12 @@ function draw(){
     stroke(50);
     fill(255);
     //rect(5*unit, 10*unit, unit*1485, unit*735);
-    rect(xA1, yA1, xA2, yA2);
-    rect(xB1, yB1, xB2, yB2);
-    rect(xC1, yC1, xC2, yC2);
-    rect(xD1, yD1, xD2, yD2);
-    rect(xE1, yE1, xE2, yE2);
-    rect(xF1, yF1, xF2, yF2);
+    rect(xA1, yA1, wid, hei);
+    rect(xB1, yB1, wid, hei);
+    rect(xC1, yC1, wid, hei);
+    rect(xD1, yD1, wid, hei);
+    rect(xE1, yE1, wid, hei);
+    rect(xF1, yF1, wid, hei);
 
 }
 
