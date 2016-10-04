@@ -14,7 +14,12 @@ function draw(){
   //  rect(978, 360, 455, 340);
   //  rect(498, 360, 470, 340);
 
-    rect(4, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(4, 4, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(978, 4, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(498, 4, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(4, 360, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(978, 360, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(498, 360, (1/3)*windowWidth, (1/2)*windowHeight);
 }
 
 function mouseClicked() {
