@@ -66,6 +66,15 @@ function draw(){
     rect(xE1, yE1, wid, hei);
     rect(xF1, yF1, wid, hei);
 
+<<<<<<< HEAD
+    rect(4, 4, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(978, 4, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(498, 4, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(4, 360, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(978, 360, (1/3)*windowWidth, (1/2)*windowHeight);
+    rect(498, 360, (1/3)*windowWidth, (1/2)*windowHeight);
+=======
+>>>>>>> jtlthe2/master
 }
 
 function touchStarted() {
