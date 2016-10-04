@@ -1,10 +1,11 @@
+var color; //integer that contains the color to be sent to the moniter.
 var unit;
-var xA1, xA2, yA1, yA2;
-var xB1, xB2, yB1, yB2;
-var xC1, xC2, yC1, yC2;
-var xD1, xD2, yD1, yD2;
-var xE1, xE2, yE1, yE2;
-var xF1, xF2, yF1, yF2;
+var xA1, yA1;
+var xB1, yB1;
+var xC1, yC1;
+var xD1, yD1;
+var xE1, yE;
+var xF1, yF1;
 var wid, hei;
 
 //unitH = windowHeight/700;
