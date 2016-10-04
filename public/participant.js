@@ -1,20 +1,78 @@
+var unit;
+var xA1, xA2, yA1, yA2;
+var xB1, xB2, yB1, yB2;
+var xC1, xC2, yC1, yC2;
+var xD1, xD2, yD1, yD2;
+var xE1, xE2, yE1, yE2;
+var xF1, xF2, yF1, yF2;
+
+//unitH = windowHeight/700;
+
 function setup(){
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   background(0);
   console.log("Ready to listen to Input -->");
+  
+  unit = (windowWidth*windowHeight)/(700*1500);
+
+
+/*  //rect(5*unit, 10*unit, unit*1485, unit*735);
+  //rect(xA1, yA1, xA2, yA2);
+  xA1 = 5*unit;
+  yA1 = 10*unit;
+  xA2 = unit*1485;
+  yA2 = unit*735;*/
+
+  //rect(5*unit, 10*unit, unit*1485, unit*735);
+  //rect(xA1, yA1, xA2, yA2);
+  xA1 = 5*unit;
+  yA1 = 10*unit;
+  xA2 = unit*495;
+  yA2 = unit*367.5;
+
+  xB1 = unit*495;
+  yB1 = 10*unit;
+  xB2 = unit*495;
+  yB2 = unit*367.5;
+
+  xC1 = unit*990;
+  yC1 = 10*unit;
+  xC2 = unit*495;
+  yC2 = unit*367.5;
+
+  xD1 = 5*unit;
+  yD1 = unit*367.5;
+  xD2 = unit*495;
+  yD2 = unit*367.5;
+
+  xE1 = unit*495;
+  yE1 = unit*367.5;
+  xE2 = unit*495;
+  yE2 = unit*367.5;
+
+  xF1 = unit*990;
+  yF1 = unit*367.5;
+  xF2 = unit*495;
+  yF2 = unit*367.5;
 }
 
 function draw(){
-  background(0);
+  background(255);
 
-  //  rect(4, 4, 483, 343);
-  //  rect(978, 4, 455, 343);
-  //  rect(498, 4, 470, 343);
-  //  rect(4, 360, 483, 340);
-  //  rect(978, 360, 455, 340);
-  //  rect(498, 360, 470, 340);
+/*  unitW = windowWidth/1433;
+  unitH = windowHeight/700;*/
 
-    rect(4, (1/3)*windowWidth, (1/2)*windowHeight);
+    strokeWeight(10*unit);
+    stroke(50);
+    fill(255);
+    //rect(5*unit, 10*unit, unit*1485, unit*735);
+    rect(xA1, yA1, xA2, yA2);
+    rect(xB1, yB1, xB2, yB2);
+    rect(xC1, yC1, xC2, yC2);
+    rect(xD1, yD1, xD2, yD2);
+    rect(xE1, yE1, xE2, yE2);
+    rect(xF1, yF1, xF2, yF2);
+
 }
 
 function mouseClicked() {
