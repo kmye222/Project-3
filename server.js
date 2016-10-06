@@ -1,9 +1,33 @@
 //a very very simple server
 
+
 var express = require('express');
 var app = express();
+var dotenv = require('dotenv');
+var PubNub = require('pubnub');
+var server = app.listen(8081, function () {
+  console.log("Shazam! listening on port 8081");
+})
+
+dotenv.load();
 
 app.use(express.static('public'));
+
+var pubnub = new PubNub({
+    publishKey : process.env.publishKey,
+    subscribeKey : process.env.subscribeKey,
+    secretKey: process.env.secretKey,
+})
+
+function publishSampleMessage(whichTrigger) {
+    var publishConfig = {
+        channel : "coco_channel_no_1",
+        message : whichTrigger
+    }
+    pubnub.publish(publishConfig, function(status, response) {
+        console.log(status, response);
+    })
+}
 
 app.get('/box_A', function(request,response){
   // response.json({"status":"success"});
