@@ -17,29 +17,19 @@ function setup(){
   
   unit = (windowWidth*windowHeight)/(700*1500);
 
-
-/*  //rect(5*unit, 10*unit, unit*1485, unit*735);
-  //rect(xA, yA, xA2, yA2);
-  xA = 5*unit;
-  yA = 10*unit;
-  xA2 = unit*1485;
-  yA2 = unit*735;*/
-
-  //rect(5*unit, 10*unit, unit*1485, unit*735);
-  //rect(xA, yA, xA2, yA2);
   wid = unit*495;
   hei = unit*367.5;
 
-  xA = 5*unit;
-  yA = 10*unit;
+  xA = unit*5;
+  yA = unit*10;
 
   xB = unit*495;
-  yB = 10*unit;
+  yB = unit*10;
 
   xC = unit*990;
-  yC = 10*unit;
+  yC = unit*10;
 
-  xD = 5*unit;
+  xD = unit*5;
   yD = unit*367.5;
 
   xE = unit*495;
@@ -70,32 +60,32 @@ function draw(){
 
 function touchStarted() {
   if(mouseX>xA&&mouseX<xA+wid&&mouseY>yA&&mouseY<yA+hei){
-    console.log("clicked on trigger_1");
-    httpGet('/trigger_1');
+    console.log("clicked on box_A");
+    httpGet('/box_A');
   }
 
   if(mouseX>250&&mouseX<350&&mouseY>100&&mouseY<150){
-    console.log("clicked on trigger_2");
-    httpGet('/trigger_2');
+    console.log("clicked on box_B");
+    httpGet('/box_B');
   }
 
   if(mouseX>450&&mouseX<550&&mouseY>100&&mouseY<150){
-    console.log("clicked on trigger_3");
-    httpGet('/trigger_3');
+    console.log("clicked on box_C");
+    httpGet('/box_C');
   }
 
   if(mouseX>50&&mouseX<150&&mouseY>200&&mouseY<250){
-    console.log("clicked on trigger_4");
-    httpGet('/trigger_4');
+    console.log("clicked on box_D");
+    httpGet('/box_D');
   }
 
   if(mouseX>250&&mouseX<350&&mouseY>200&&mouseY<250){
-    console.log("clicked on trigger_5");
-    httpGet('/trigger_5');
+    console.log("clicked on box_E");
+    httpGet('/box_E');
   }
 
   if(mouseX>450&&mouseX<550&&mouseY>200&&mouseY<250){
-    console.log("clicked on trigger_6");
-    httpGet('/trigger_6');
+    console.log("clicked on box_F");
+    httpGet('/box_F');
   }
 }

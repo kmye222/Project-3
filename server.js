@@ -5,40 +5,40 @@ var app = express();
 
 app.use(express.static('public'));
 
-app.get('/trigger_1', function(request,response){
+app.get('/box_A', function(request,response){
   // response.json({"status":"success"});
   response.sendStatus(200);
-  console.log("trigger 1 pressed");
+  console.log("trigger A pressed");
 })
 
-app.get('/trigger_2', function(request,response){
+app.get('/box_B', function(request,response){
   // response.json({"status":"success"});
   response.sendStatus(200);
-  console.log("trigger 2 pressed");
+  console.log("trigger B pressed");
 })
 
-app.get('/trigger_3', function(request,response){
+app.get('/box_C', function(request,response){
   // response.json({"status":"success"});
   response.sendStatus(200);
-  console.log("trigger 3 pressed");
+  console.log("trigger C pressed");
 })
 
-app.get('/trigger_4', function(request,response){
+app.get('/box_D', function(request,response){
   // response.json({"status":"success"});
   response.sendStatus(200);
-  console.log("trigger 4 pressed");
+  console.log("trigger D pressed");
 })
 
-app.get('/trigger_5', function(request,response){
+app.get('/box_E', function(request,response){
   // response.json({"status":"success"});
   response.sendStatus(200);
-  console.log("trigger 5 pressed");
+  console.log("trigger E pressed");
 })
 
-app.get('/trigger_6', function(request,response){
+app.get('/box_F', function(request,response){
   // response.json({"status":"success"});
   response.sendStatus(200);
-  console.log("trigger 6 pressed");
+  console.log("trigger F pressed");
 })
 
 // rely again on static server -->
