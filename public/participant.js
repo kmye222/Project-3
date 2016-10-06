@@ -1,11 +1,11 @@
 var color; //integer that contains the color to be sent to the moniter.
 var unit; //unit to multiply all screen demensional junk by to keep it all nice and ratioed.
-var xA1, yA1;
-var xB1, yB1;
-var xC1, yC1;
-var xD1, yD1;
-var xE1, yE1;
-var xF1, yF1;
+var xA, yA;
+var xB, yB;
+var xC, yC;
+var xD, yD;
+var xE, yE;
+var xF, yF;
 var wid, hei;
 
 //unitH = windowHeight/700;
@@ -19,34 +19,34 @@ function setup(){
 
 
 /*  //rect(5*unit, 10*unit, unit*1485, unit*735);
-  //rect(xA1, yA1, xA2, yA2);
-  xA1 = 5*unit;
-  yA1 = 10*unit;
+  //rect(xA, yA, xA2, yA2);
+  xA = 5*unit;
+  yA = 10*unit;
   xA2 = unit*1485;
   yA2 = unit*735;*/
 
   //rect(5*unit, 10*unit, unit*1485, unit*735);
-  //rect(xA1, yA1, xA2, yA2);
+  //rect(xA, yA, xA2, yA2);
   wid = unit*495;
   hei = unit*367.5;
 
-  xA1 = 5*unit;
-  yA1 = 10*unit;
+  xA = 5*unit;
+  yA = 10*unit;
 
-  xB1 = unit*495;
-  yB1 = 10*unit;
+  xB = unit*495;
+  yB = 10*unit;
 
-  xC1 = unit*990;
-  yC1 = 10*unit;
+  xC = unit*990;
+  yC = 10*unit;
 
-  xD1 = 5*unit;
-  yD1 = unit*367.5;
+  xD = 5*unit;
+  yD = unit*367.5;
 
-  xE1 = unit*495;
-  yE1 = unit*367.5;
+  xE = unit*495;
+  yE = unit*367.5;
 
-  xF1 = unit*990;
-  yF1 = unit*367.5;
+  xF = unit*990;
+  yF = unit*367.5;
 }
 
 function draw(){
@@ -59,17 +59,17 @@ function draw(){
     stroke(50);
     fill(255);
     //rect(5*unit, 10*unit, unit*1485, unit*735);
-    rect(xA1, yA1, wid, hei);
-    rect(xB1, yB1, wid, hei);
-    rect(xC1, yC1, wid, hei);
-    rect(xD1, yD1, wid, hei);
-    rect(xE1, yE1, wid, hei);
-    rect(xF1, yF1, wid, hei);
+    rect(xA, yA, wid, hei);
+    rect(xB, yB, wid, hei);
+    rect(xC, yC, wid, hei);
+    rect(xD, yD, wid, hei);
+    rect(xE, yE, wid, hei);
+    rect(xF, yF, wid, hei);
 
 }
 
 function touchStarted() {
-  if(mouseX>50&&mouseX<150&&mouseY>100&&mouseY<150){
+  if(mouseX>xA&&mouseX<xA+wid&&mouseY>yA&&mouseY<yA+hei){
     console.log("clicked on trigger_1");
     httpGet('/trigger_1');
   }
