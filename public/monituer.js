@@ -25,22 +25,22 @@ function draw(){
     text("Under Construction", 100, 100);
   }
   else if(message_state==1){
-    text("Trigger 1", 100, 100);
+    text("Box A", 100, 100);
   }
   else if(message_state==2){
-    text("Trigger 2", 100, 100);
+    text("Box B", 100, 100);
   }
   else if(message_state==3){
-    text("Trigger 3", 100, 100);
+    text("Box C", 100, 100);
   }
   else if(message_state==4){
-    text("Trigger 4", 100, 100);
+    text("Box D", 100, 100);
   }
   else if(message_state==5){
-    text("Trigger 5", 100, 100);
+    text("Box E", 100, 100);
   }
   else{
-    text("Trigger 6", 100, 100);
+    text("Box F", 100, 100);
   }
 }
 
