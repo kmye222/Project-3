@@ -19,7 +19,7 @@ function setup(){
   createCanvas(windowWidth, windowHeight);
   background(0);
   console.log("Ready to listen to Input -->");
-  
+
   unit = (windowWidth*windowHeight)/(700*1500);
 
   wid = unit*495;
@@ -213,3 +213,5 @@ var payload = {
     httpGet('/box_6');
   }
 }
+
+//test
