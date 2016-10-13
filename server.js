@@ -6,11 +6,15 @@ var express = require('express');
 var app = express();
 var dotenv = require('dotenv');
 var PubNub = require('pubnub');
+var bodyParser = require('body-parser');
+
 var server = app.listen(8081, function () {
   console.log("Shazam! listening on port 8081");
 })
 
 dotenv.load();
+
+var jsonParser = bodyParser.json()
 
 app.use(express.static('public'));
 
@@ -30,7 +34,21 @@ function publishSampleMessage(payload) {
     })
 }
 
-app.get('/box_1', function(request,response){
+app.post('/sendPayload', jsonParser, function(request,response){
+  console.log("payload delivered to server");
+  response.sendStatus(200);
+  console.log(request);
+/*  var params= {
+    R: 30,
+    G: 30,
+    B: 30,
+    box: 6
+  }*/
+  //publishSampleMessage(params);
+  console.log("payload delivered to server");
+})
+
+/*app.get('/box_1', function(request,response){
   // response.json({"status":"success"});
   response.sendStatus(200);
   var params= {
@@ -106,39 +124,4 @@ app.get('/box_6', function(request,response){
   }
   publishSampleMessage(params);
   console.log("box 6 pressed");
-})
-
-/*app.get('/', function(req, res, next) {
-
- var amount = req.query.amount; // GET THE AMOUNT FROM THE GET REQUEST
-
-    var stripeToken = "CUSTOM_PAYMENT_TOKEN";
-
-    var params={
-      R:
-      G:
-      B:
-      box:
-    }
-
-    var params = stripe.charges.create({
-        amount: 1100, // amount in cents, again
-        currency: "usd",
-        source: stripeToken,
-        description: "Example charge"
-    }, function(err, charge) {
-        if (err && err.type === 'StripeCardError') {
-            res.json(err);   
-        } else {
-            res.json(charge);   
-        }
-    });
-});*/
-
-// rely again on static server -->
-
-// app.get('/', function(request,response){
-//   // response.json({"status":"success"});
-//   response.send(200, "waiting for your command, master");
-//   console.log("standby, awaiting command");
-// })
+})*/

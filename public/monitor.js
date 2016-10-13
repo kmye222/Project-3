@@ -13,6 +13,7 @@ var x4, y4;
 var x5, y5;
 var x6, y6;
 var wid, hei;
+var R, G, B;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -20,10 +21,10 @@ function setup(){
   
   unit = (windowWidth*windowHeight)/(700*1500);
 
-  wid = unit*495;
-  hei = unit*367.5;
+  wid = windowWidth/3;
+  hei = windowHeight/2;
 
-  x1 = unit*5;
+  /*x1 = unit*5;
   y1 = unit*10;
 
   x2 = unit*495;
@@ -39,7 +40,25 @@ function setup(){
   y5 = unit*367.5;
 
   x6 = unit*990;
-  y6 = unit*367.5;
+  y6 = unit*367.5;*/
+
+  x1 = 0;
+  y1 = 0;
+
+  x2 = windowWidth*(1/3);
+  y2 = 0;
+
+  x3 = windowWidth*(2/3);
+  y3 = 0;
+
+  x4 = 0;
+  y4 = windowHeight*(1/2);
+
+  x5 = windowWidth*(1/3);
+  y5 = windowHeight*(1/2);
+
+  x6 = windowWidth*(2/3);
+  y6 = windowHeight*(1/2);
 
   console.log("Subscribing..");
   pubnub.subscribe({
@@ -51,7 +70,8 @@ function draw(){
 
   background(0);
   textSize(20);
-  fill(255);
+  fill(R, G, B);
+  stroke(R, G, B);
 
   //a very simple state machine
   if(message_state==0){
@@ -85,31 +105,49 @@ pubnub.addListener({
       //colour = color(command.message.R, command.message.G, command.message.B);
       message_state=1;
       console.log("box 1 listener fired");
+      R = command.message.r;
+      G = command.message.g;
+      B = command.message.b;
     }
     else if (command.message.box==2){
       //colour = color(command.message.R, command.message.G, command.message.B);
       message_state=2;
       console.log("box 2 listener fired");
+      R = command.message.r;
+      G = command.message.g;
+      B = command.message.b;
     }
     else if (command.message.box==3){
       //colour = color(command.message.R, command.message.G, command.message.B);
       message_state=3;
       console.log("box 3 listener fired");
+      R = command.message.r;
+      G = command.message.g;
+      B = command.message.b;
     }
     else if (command.message.box==4){
       //colour = color(command.message.R, command.message.G, command.message.B);
       message_state=4;
       console.log("box 4 listener fired");
+      R = command.message.r;
+      G = command.message.g;
+      B = command.message.b;
     }
     else if (command.message.box==5){
       //colour = color(command.message.R, command.message.G, command.message.B);
       message_state=5;
       console.log("box 5 listener fired");
+      R = command.message.r;
+      G = command.message.g;
+      B = command.message.b;
     }
     else if (command.message.box==6){
       //colour = color(command.message.R, command.message.G, command.message.B);
       message_state=6;
       console.log("box 6 listener fired");
+      R = command.message.r;
+      G = command.message.g;
+      B = command.message.b;
     }
     else{
       message_state=0;
