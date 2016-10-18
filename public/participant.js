@@ -1,5 +1,9 @@
 //var request = require('request');
 //const queryString = require('query-string');
+var pubnub = new PubNub({
+  publishKey : 'pub-c-e7dcf775-8dce-4985-bd67-7d25426b78bb',
+  subscribeKey : 'sub-c-f3ee9bac-8c06-11e6-a8c4-0619f8945a4f'
+});
 
 //GLOBALS
 
@@ -14,6 +18,16 @@ var x6, y6;
 var wid, hei;
 var R, G, B;
 var boxSelected;
+
+function publishSampleMessage(payload) {
+    var publishConfig = {
+        channel : "coco_channel_no_1",
+        message : payload
+    }
+    pubnub.publish(publishConfig, function(status, response) {
+        console.log(status, response);
+    })
+}
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -54,7 +68,7 @@ function windowResized(){
   createCanvas(windowWidth, windowHeight);
   background(0);
   
-  unit = (windowWidth*windowHeight)/(700*1500);
+  /*unit = (windowWidth*windowHeight)/(700*1500);
 
   wid = unit*495;
   hei = unit*367.5;
@@ -75,7 +89,28 @@ function windowResized(){
   y5 = unit*367.5;
 
   x6 = unit*990;
-  y6 = unit*367.5;
+  y6 = unit*367.5;*/
+
+  wid = windowWidth/3;
+  hei = windowHeight/2;
+
+  x1 = 0;
+  y1 = 0;
+
+  x2 = windowWidth*(1/3);
+  y2 = 0;
+
+  x3 = windowWidth*(2/3);
+  y3 = 0;
+
+  x4 = 0;
+  y4 = windowHeight*(1/2);
+
+  x5 = windowWidth*(1/3);
+  y5 = windowHeight*(1/2);
+
+  x6 = windowWidth*(2/3);
+  y6 = windowHeight*(1/2);
 }
 
 function draw(){
@@ -154,14 +189,21 @@ function touchMoved(){
 
 function touchEnded() {
 
-console.log("Touch Ended");
+  console.log("Touch Ended");
 
-var payload = {
-  box: boxSelected,
-  r: R,
-  g: G,
-  b: B
-};
+  var payload = {
+    box: boxSelected,
+    r: R,
+    g: G,
+    b: B
+  };
+
+  publishSampleMessage(payload);
+
+  // httpPost('/sendPayload', payload, "json", function(response){
+  //   console.log(response);
+  // });
+  console.log("payload published:", payload);
 
   //var url = getURL();
 
@@ -182,8 +224,7 @@ var payload = {
   console.log("Get response: " + response.statusCode);
 });*/
 
-
-  if(boxSelected==1){
+  /*if(boxSelected==1){
     console.log("touched box_1");
     httpGet('/box_1');
   }
@@ -211,7 +252,7 @@ var payload = {
   if(boxSelected==6){
     console.log("touched box_6");
     httpGet('/box_6');
-  }
+  }*/
 }
 
 //test

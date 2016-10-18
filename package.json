@@ -2,6 +2,7 @@
   "name": "socket_server",
   "description": "server to serve servable stuff",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "dotenv": "^2.0.0",
     "express": "~4.13.4",
     "pubnub": "^4.0.13",
